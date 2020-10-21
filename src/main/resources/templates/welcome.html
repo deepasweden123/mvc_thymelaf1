@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
+    <script defer th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script defer th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script defer th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<div th:insert="navbar :: navigation" ></div>
+
+<div class="container-fluid">
+
+    <div class="jumbotron text-center">
+        <h1>#### Welcome page ####</h1>
+        <p>This Is a Responsive Page</p>
+    </div>
+</div>
+
+
+<div th:insert="footer :: footer"></div>
+
+</body>
+</html>

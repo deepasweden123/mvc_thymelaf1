@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf Test</title>
+</head>
+<body>
+Server Time: <span th:text="${serverTime}"/>
+<br/>
+Name: <span th:text="${#strings.capitalize(name)}"/>
+<br/>
+Price: <span th:text="${#numbers.formatDecimal(price,1,2)}"/>
+<br/>
+Date: <span th:text="${#temporals.format(d,'dd-MM-yyy')}"/>
+
+
+<br/>
+<br/>
+<a th:href="@{/welcome}">Go to Welcome Page</a>
+
+<br/>
+<br/>
+
+<table border="1">
+    <th>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Email</td>
+    <td>Course</td>
+    </th>
+
+    <tr th:each="student: ${students}">
+
+        <td>
+            <span th:text="*{student.id}"/>
+        </td>
+
+        <td th:if="${student.name.equalsIgnoreCase('Test2')}">
+            <span style="color: red" th:text="*{student.name}"/>
+        </td>
+        <td th:unless="${student.name.equalsIgnoreCase('Test2')}">
+            <span th:text="*{student.name}"/>
+        </td>
+
+        <td>
+            <span th:text="*{student.email}"/>
+        </td>
+        <td>
+            <span th:text="*{student.course}"/>
+        </td>
+    </tr>
+
+</table>
+<br/>
+<form th:action="@{/test/add}" method="post" th:object="${dto}">
+    Name: <input th:type="text" th:field="*{name}"/><br/>
+    Email: <input th:type="text" th:field="*{email}"/><br/>
+    Course: <input th:type="text" th:field="*{course}"/><br/>
+    <input th:type="submit" value="Submit">
+</form>
+
+<div th:insert="footer :: footer"></div>
+
+</body>
+</html>
