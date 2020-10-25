@@ -15,10 +15,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Mehrdad Javan
- * Date: Oct, 2020
- */
+
 @Controller
 @RequestMapping("/test")
 public class TestController {

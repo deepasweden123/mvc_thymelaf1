@@ -7,10 +7,6 @@ import javax.persistence.Id;
 import java.time.LocalDate;
 import java.util.Objects;
 
-/**
- * Created by Mehrdad Javan
- * Date: Oct, 2020
- */
 
 @Entity
 public class Student {

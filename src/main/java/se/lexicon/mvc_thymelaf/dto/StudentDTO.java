@@ -1,9 +1,6 @@
 package se.lexicon.mvc_thymelaf.dto;
 
-/**
- * Created by Mehrdad Javan
- * Date: Oct, 2020
- */
+
 public class StudentDTO {
 
     private String name;
