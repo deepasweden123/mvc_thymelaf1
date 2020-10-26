@@ -1,4 +1,4 @@
-package se.lexicon.mvc_thymelaf;
+package se.fortnox.mvc_thymelaf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

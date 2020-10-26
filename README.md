@@ -1,12 +1,12 @@
 # Spring MVC - Thymeleaf
 
 ###1- Create Spring Boot Maven Project
-#####Dependencies:
-    thymeleaf,
-    web,
-    validation,
-    data JPA,
-    h2 database,
+#####Using the Dependencies for creation of the Project in spring.io intializer:
+    1)thymeleaf,
+    2)web,
+    3)validation,
+    4)data JPA,
+    5)h2 database,
     mysql,
     devtools
     

@@ -1,4 +1,4 @@
-package se.lexicon.mvc_thymelaf.controller;
+package se.fortnox.mvc_thymelaf.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
