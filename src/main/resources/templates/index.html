@@ -2,23 +2,32 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Index Page</title>
+    <title>Welcome to Boxinator page..............</title>
     <!--  add bootstrap resources  -->
     <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
     <script defer th:src="@{/webjars/jquery/jquery.min.js}"></script>
     <script defer th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
     <script defer th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <title>Welcome to Boxinator page..............</title>
 
 </head>
 <body>
-<div th:insert="navbar :: navigation" ></div>
+<center>
+<form th:action="@{/addbox}" th:object="${user}" method="post" >
+    <p>Receiver Name :<input type="text" name="username" /></p>
+    <p>Weight :<input type="text" name="weight" /></p>
+    <p>Box color :<input type="text" name="color" /></p>
+    <p>Country:
+    <select id = "myList">
 
-<div class="jumbotron text-center">
-    <h1>Index Page</h1>
-    <p>This Is a Responsive Page</p>
-</div>
-
-
-<div th:insert="footer :: footer"></div>
+        <option value = "1">Sweden</option>
+        <option value = "2">China</option>
+        <option value = "3">Brazil</option>
+        <option value = "4">Australia</option>
+    </select>
+</p>
+    <p><input type="submit" value="Save" /></p>
+</form>
+</center>
 </body>
 </html>
